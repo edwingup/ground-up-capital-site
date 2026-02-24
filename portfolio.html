@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio | Ground Up Capital</title>
+  <meta name="description" content="Sample portfolio of SFR long-term rentals, STR/mid-term strategies, and a small multifamily investment across Austin and the Sunbelt." />
+  <meta property="og:title" content="Portfolio" />
+  <meta property="og:description" content="Sample portfolio of SFR long-term rentals, STR/mid-term strategies, and a small multifamily investment across Austin and the Sunbelt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-cover.svg" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-sticky-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Ground Up Capital home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Ground Up Capital</span>
+          <span class="brand-tagline">Diversify beyond public markets—one investment at a time.</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="investments.html">Investments</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="creintel.html">CREIntel</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-sm" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Sample investments (MVP)</h1>
+        <p class="lead">Select examples shown for demonstration purposes—<strong>not a complete list</strong>.</p>
+
+        <div class="filters" aria-label="Portfolio filters">
+          <div class="filter-group">
+            <span class="filter-label">Type</span>
+            <button class="chip is-active" data-filter-type="all" type="button">All</button>
+            <button class="chip" data-filter-type="sfr" type="button">SFR</button>
+            <button class="chip" data-filter-type="str" type="button">STR/MTR</button>
+            <button class="chip" data-filter-type="mf" type="button">Multifamily</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Market</span>
+            <button class="chip is-active" data-filter-market="all" type="button">All</button>
+            <button class="chip" data-filter-market="austin" type="button">Austin</button>
+            <button class="chip" data-filter-market="sunbelt" type="button">Sunbelt</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3" id="portfolio-grid">
+          <article class="property" data-type="sfr" data-market="austin">
+            <img loading="lazy" src="assets/img/property-1.svg" alt="Sample property image" />
+            <div class="property-body">
+              <div class="tags"><span class="tag">SFR</span><span class="tag">Austin</span><span class="tag tag-soft">Stabilized</span></div>
+              <h3>Oakview SFR</h3>
+              <p class="muted">Austin, TX • 3/2 • Long-term rental</p>
+              <ul class="mini"><li>Tenant: long-term</li><li>Focus: durability</li><li>Status: stabilized</li></ul>
+            </div>
+          </article>
+
+          <article class="property" data-type="sfr" data-market="austin">
+            <img loading="lazy" src="assets/img/property-4.svg" alt="Sample property image" />
+            <div class="property-body">
+              <div class="tags"><span class="tag">SFR</span><span class="tag">Austin</span><span class="tag tag-soft">Active</span></div>
+              <h3>Vista Bend</h3>
+              <p class="muted">Austin, TX • 4/2 • Long-term rental</p>
+              <ul class="mini"><li>Light rehab</li><li>Pricing optimization</li><li>Status: active</li></ul>
+            </div>
+          </article>
+
+          <article class="property" data-type="sfr" data-market="sunbelt">
+            <img loading="lazy" src="assets/img/property-5.svg" alt="Sample property image" />
+            <div class="property-body">
+              <div class="tags"><span class="tag">SFR</span><span class="tag">Sunbelt</span><span class="tag tag-soft">Stabilized</span></div>
+              <h3>Sunridge</h3>
+              <p class="muted">Sunbelt Metro • 3/2 • Long-term rental</p>
+              <ul class="mini"><li>Low-maintenance</li><li>Tenant retention</li><li>Status: stabilized</li></ul>
+            </div>
+          </article>
+
+          <article class="property" data-type="str" data-market="austin">
+            <img loading="lazy" src="assets/img/property-3.svg" alt="Sample property image" />
+            <div class="property-body">
+              <div class="tags"><span class="tag">STR</span><span class="tag">Austin Area</span><span class="tag tag-soft">Active</span></div>
+              <h3>Juniper Retreat</h3>
+              <p class="muted">Central TX • 2/2 • STR (with MTR fallback)</p>
+              <ul class="mini"><li>Seasonality-aware</li><li>Guest experience</li><li>Status: active</li></ul>
+            </div>
+          </article>
+
+          <article class="property" data-type="mf" data-market="sunbelt">
+            <img loading="lazy" src="assets/img/property-2.svg" alt="Sample property image" />
+            <div class="property-body">
+              <div class="tags"><span class="tag">Multifamily</span><span class="tag">Sunbelt</span><span class="tag tag-soft">Value-add</span></div>
+              <h3>Riverview Flats</h3>
+              <p class="muted">Sunbelt Metro • 8 units • Small multifamily</p>
+              <ul class="mini"><li>Unit turns</li><li>Operational cleanup</li><li>Status: value-add</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Ground Up Capital</p>
+        <p class="muted">Diversify beyond public markets—one investment at a time.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="investments.html">Investments</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="creintel.html">CREIntel</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p class="muted">
+          For informational purposes only. Not investment advice. No offer to sell or solicitation of an offer to buy securities.
+          Accredited investors only.
+        </p>
+        <p class="muted">Contact: <a class="link" href="mailto:info@groundupholdings.com">info@groundupholdings.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
