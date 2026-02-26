@@ -1,3 +1,3 @@
 deployment:
   tasks:
-    - /bin/cp -R * /home/kdgominy/public_html/
+    - /bin/cp -R * /home1/kdgonimy/public_html/
