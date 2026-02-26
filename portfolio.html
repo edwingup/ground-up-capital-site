@@ -2,20 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Ground Up Capital</title>
-  <meta name="description" content="Sample portfolio of SFR long-term rentals, STR/mid-term strategies, and a small multifamily investment across Austin and the Sunbelt." />
-  <meta property="og:title" content="Portfolio" />
-  <meta property="og:description" content="Sample portfolio of SFR long-term rentals, STR/mid-term strategies, and a small multifamily investment across Austin and the Sunbelt." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-cover.svg" />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="description" content="Select investments: Austin SFR portfolio, Saraland AL 24-unit, and Blyth Northumberland STR." />
+  <link rel="stylesheet" href="assets/css/portfolio-v2.css" />
 </head>
-<body>
+<body class="p2">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-sticky-header>
     <div class="container header-inner">
@@ -34,7 +26,7 @@
       <nav class="nav" data-nav>
         <a href="index.html">Home</a>
         <a href="investments.html">Investments</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a class="active" href="portfolio.html">Portfolio</a>
         <a href="creintel.html">CREIntel</a>
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
@@ -42,112 +34,119 @@
       </nav>
     </div>
   </header>
-  <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Sample investments (MVP)</h1>
-        <p class="lead">Select examples shown for demonstration purposes—<strong>not a complete list</strong>.</p>
 
-        <div class="filters" aria-label="Portfolio filters">
-          <div class="filter-group">
-            <span class="filter-label">Type</span>
-            <button class="chip is-active" data-filter-type="all" type="button">All</button>
-            <button class="chip" data-filter-type="sfr" type="button">SFR</button>
-            <button class="chip" data-filter-type="str" type="button">STR/MTR</button>
-            <button class="chip" data-filter-type="mf" type="button">Multifamily</button>
-          </div>
-
-          <div class="filter-group">
-            <span class="filter-label">Market</span>
-            <button class="chip is-active" data-filter-market="all" type="button">All</button>
-            <button class="chip" data-filter-market="austin" type="button">Austin</button>
-            <button class="chip" data-filter-market="sunbelt" type="button">Sunbelt</button>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="card">
+        <div class="hero-media">
+          <img src="assets/img/portfolio/austin-sfr/hero.jpg" alt="Portfolio hero" />
+          <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="pad">
+          <div class="kicker">Investment portfolio</div>
+          <h1 class="h1">Select case studies built for investor credibility.</h1>
+          <p class="lead">Three representative assets across single-family, multifamily, and short-term rental strategies. Replace placeholder images and copy with your real details.</p>
+          <div class="pills">
+            <div class="pill"><strong>3</strong>&nbsp;assets</div>
+            <div class="pill"><strong>US + UK</strong>&nbsp;markets</div>
+            <div class="pill"><strong>Operator-led</strong>&nbsp;execution</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-3" id="portfolio-grid">
-          <article class="property" data-type="sfr" data-market="austin">
-            <img loading="lazy" src="assets/img/property-1.svg" alt="Sample property image" />
-            <div class="property-body">
-              <div class="tags"><span class="tag">SFR</span><span class="tag">Austin</span><span class="tag tag-soft">Stabilized</span></div>
-              <h3>Oakview SFR</h3>
-              <p class="muted">Austin, TX • 3/2 • Long-term rental</p>
-              <ul class="mini"><li>Tenant: long-term</li><li>Focus: durability</li><li>Status: stabilized</li></ul>
-            </div>
-          </article>
-
-          <article class="property" data-type="sfr" data-market="austin">
-            <img loading="lazy" src="assets/img/property-4.svg" alt="Sample property image" />
-            <div class="property-body">
-              <div class="tags"><span class="tag">SFR</span><span class="tag">Austin</span><span class="tag tag-soft">Active</span></div>
-              <h3>Vista Bend</h3>
-              <p class="muted">Austin, TX • 4/2 • Long-term rental</p>
-              <ul class="mini"><li>Light rehab</li><li>Pricing optimization</li><li>Status: active</li></ul>
-            </div>
-          </article>
-
-          <article class="property" data-type="sfr" data-market="sunbelt">
-            <img loading="lazy" src="assets/img/property-5.svg" alt="Sample property image" />
-            <div class="property-body">
-              <div class="tags"><span class="tag">SFR</span><span class="tag">Sunbelt</span><span class="tag tag-soft">Stabilized</span></div>
-              <h3>Sunridge</h3>
-              <p class="muted">Sunbelt Metro • 3/2 • Long-term rental</p>
-              <ul class="mini"><li>Low-maintenance</li><li>Tenant retention</li><li>Status: stabilized</li></ul>
-            </div>
-          </article>
-
-          <article class="property" data-type="str" data-market="austin">
-            <img loading="lazy" src="assets/img/property-3.svg" alt="Sample property image" />
-            <div class="property-body">
-              <div class="tags"><span class="tag">STR</span><span class="tag">Austin Area</span><span class="tag tag-soft">Active</span></div>
-              <h3>Juniper Retreat</h3>
-              <p class="muted">Central TX • 2/2 • STR (with MTR fallback)</p>
-              <ul class="mini"><li>Seasonality-aware</li><li>Guest experience</li><li>Status: active</li></ul>
-            </div>
-          </article>
-
-          <article class="property" data-type="mf" data-market="sunbelt">
-            <img loading="lazy" src="assets/img/property-2.svg" alt="Sample property image" />
-            <div class="property-body">
-              <div class="tags"><span class="tag">Multifamily</span><span class="tag">Sunbelt</span><span class="tag tag-soft">Value-add</span></div>
-              <h3>Riverview Flats</h3>
-              <p class="muted">Sunbelt Metro • 8 units • Small multifamily</p>
-              <ul class="mini"><li>Unit turns</li><li>Operational cleanup</li><li>Status: value-add</li></ul>
-            </div>
-          </article>
+      <div class="card">
+        <div class="pad">
+          <div class="kicker">Quick snapshot</div>
+          <h2 class="h2">What we optimize</h2>
+          <div class="panel" style="padding:14px; background: rgba(255,255,255,.03); border-radius: 16px;">
+            <ul>
+              <li>Downside-first underwriting</li>
+              <li>Disciplined capex + operations</li>
+              <li>Clear reporting and documentation</li>
+              <li>Repeatable playbooks</li>
+            </ul>
+          </div>
+          <div class="hr"></div>
+          <div class="small">Note: This is an MVP portfolio site. Details are illustrative unless otherwise stated.</div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <p class="footer-brand">Ground Up Capital</p>
-        <p class="muted">Diversify beyond public markets—one investment at a time.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="investments.html">Investments</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="creintel.html">CREIntel</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-disclaimer">
-        <p class="muted">
-          For informational purposes only. Not investment advice. No offer to sell or solicitation of an offer to buy securities.
-          Accredited investors only.
-        </p>
-        <p class="muted">Contact: <a class="link" href="mailto:info@groundupholdings.com">info@groundupholdings.com</a></p>
       </div>
     </div>
-  </footer>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Select investments</div>
+          <h2 class="h2">Three assets</h2>
+        </div>
+        <p>Click into each case study for narrative + gallery.</p>
+      </div>
+
+      <div class="grid cards3">
+        <a class="asset" href="portfolio/austin-sfr.html">
+          <div class="asset-media">
+            <img src="assets/img/portfolio/austin-sfr/hero.jpg" alt="Austin SFR Portfolio" />
+            <div class="tag">Austin, TX</div>
+          </div>
+          <div class="asset-body">
+            <p class="asset-title">Austin metro SFR Portfolio</p>
+            <p class="asset-sub">4 single-family homes • stabilized rentals</p>
+            <div class="stats">
+              <div class="stat"><div class="k">Homes</div><div class="v">4</div></div>
+              <div class="stat"><div class="k">Strategy</div><div class="v">SFR</div></div>
+              <div class="stat"><div class="k">Status</div><div class="v">Operating</div></div>
+            </div>
+            <div style="margin-top:10px;"><span class="btn">View case study</span></div>
+          </div>
+        </a>
+
+        <a class="asset" href="portfolio/saraland-24.html">
+          <div class="asset-media">
+            <img src="assets/img/portfolio/saraland-24/hero.jpg" alt="Saraland Multifamily" />
+            <div class="tag">Saraland, AL</div>
+          </div>
+          <div class="asset-body">
+            <p class="asset-title">Saraland Multifamily</p>
+            <p class="asset-sub">24 units • value-add operations</p>
+            <div class="stats">
+              <div class="stat"><div class="k">Units</div><div class="v">24</div></div>
+              <div class="stat"><div class="k">Strategy</div><div class="v">MF</div></div>
+              <div class="stat"><div class="k">Status</div><div class="v">Operating</div></div>
+            </div>
+            <div style="margin-top:10px;"><span class="btn">View case study</span></div>
+          </div>
+        </a>
+
+        <a class="asset" href="portfolio/blyth-str.html">
+          <div class="asset-media">
+            <img src="assets/img/portfolio/blyth-str/hero.jpg" alt="Blyth STR" />
+            <div class="tag">Blyth, UK</div>
+          </div>
+          <div class="asset-body">
+            <p class="asset-title">Blyth STR</p>
+            <p class="asset-sub">Short-term rental • UK coastal market</p>
+            <div class="stats">
+              <div class="stat"><div class="k">Type</div><div class="v">STR</div></div>
+              <div class="stat"><div class="k">Market</div><div class="v">UK</div></div>
+              <div class="stat"><div class="k">Status</div><div class="v">Operating</div></div>
+            </div>
+            <div style="margin-top:10px;"><span class="btn">View case study</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    <div class="container">
+      <div class="notice"><strong>Disclosure:</strong> Information shown is illustrative only and is not an offer to sell securities.</div>
+      <div class="hr"></div>
+      <div>© 2026 Ground Up Capital. Contact: <a href="mailto:info@groundupholdings.com">info@groundupholdings.com</a></div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-lightbox.js"></script>
 </body>
 </html>
