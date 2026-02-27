@@ -151,6 +151,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:800;letter-spacing:-.02
   padding:18px;border-radius:var(--radius2);background:rgba(255,255,255,.04);border:1px solid var(--border)}
 .callout-dark{background:rgba(15,30,56,.65)}
 .form label{display:block;margin:12px 0 10px;color:rgba(240,244,255,.86);font-size:13px}
+.form-success{padding:12px 14px;border-radius:var(--radius);background:rgba(0,212,180,.1);border:1px solid rgba(0,212,180,.3);color:var(--accent);font-size:14px;margin-bottom:8px}
+.form-error{padding:12px 14px;border-radius:var(--radius);background:rgba(255,80,80,.08);border:1px solid rgba(255,80,80,.25);color:#ff8080;font-size:14px;margin-bottom:8px}
 input,select,textarea{width:100%;margin-top:6px;padding:12px 12px;border-radius:var(--radius);background:rgba(255,255,255,.04);
   border:1px solid var(--border);color:var(--text);font:inherit}
 textarea{resize:vertical}

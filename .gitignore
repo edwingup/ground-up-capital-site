@@ -1,0 +1,10 @@
+# Env / secrets
+*-env.php
+.env
+.env.*
+
+# Claude memory
+.claude/
+
+# Patches
+patches/
