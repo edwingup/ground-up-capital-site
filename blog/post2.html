@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>From OM PDFs to structured data: the future of deal screening | Ground Up Capital</title>
-  <meta name="description" content="Why converting offering memos into structured fields is the foundation for faster screening and more consistent underwriting workflows." />
+  <meta name="description" content="Every deal arrives as a PDF. Decisions get made in spreadsheets. Here's how building a structured data layer between the two changes deal screening from a bottleneck into a repeatable pipeline." />
   <meta property="og:title" content="From OM PDFs to structured data: the future of deal screening" />
-  <meta property="og:description" content="Why converting offering memos into structured fields is the foundation for faster screening and more consistent underwriting workflows." />
+  <meta property="og:description" content="Every deal arrives as a PDF. Decisions get made in spreadsheets. Here's how building a structured data layer between the two changes deal screening from a bottleneck into a repeatable pipeline." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/img/og-cover.svg" />
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -52,20 +52,53 @@
           <span class="tag tag-soft">Deal Screening</span>
         </div>
         <h1>From OM PDFs to structured data: the future of deal screening</h1>
-        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 7 min read</p>
+        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 11 min read</p>
       </div>
     </section>
 
     <article class="article">
       <div class="container article-inner">
-        <p class="article-lead">Deal flow is abundant. Attention is scarce. Structured data turns screening into a repeatable pipeline where teams compare deals consistently and escalate the right ones.</p>
-<h2>Structured data is the missing layer</h2>
-<p>The missing layer is a “document-to-fields” bridge that standardizes what matters across deals.</p>
-<h2>What to structure first</h2>
-<ul><li><strong>Core performance:</strong> income, expenses, NOI, occupancy</li><li><strong>Business plan:</strong> capex items, timelines</li><li><strong>Risks:</strong> concentration, deferred maintenance</li></ul>
-<h2>Where AI fits</h2>
-<p>AI accelerates extraction, but products must add citations, confidence, and review queues to be trustworthy.</p>
-<p class="muted">Related: <a class="link" href="post3.html">Why confidence scoring matters in AI-driven underwriting</a>.</p>
+        <p class=”article-lead”>Every deal arrives as a PDF. Decisions get made in spreadsheets. The distance between those two things—document and decision—is where most deal review time gets consumed. Building a structured data layer between them is not a technology problem. It's a process problem that technology can now solve.</p>
+
+        <h2>What's actually inside an offering memorandum</h2>
+        <p>An OM is a sales document, not an underwriting document. It's designed to present an asset compellingly, which means the most optimistic interpretation of the financials leads. Understanding what's in there—and how to read it skeptically—is step one.</p>
+        <p>A typical OM includes: property description and location summary, a trailing 12-month income and expense statement, a current rent roll, a broker pro forma (projected financials under their assumptions), market data and comparable sales, and a business plan narrative. In a value-add deal, there's usually a renovation scope and projected post-renovation rents.</p>
+        <p>The T12 is the most important document in the package and usually the hardest to find. It's often buried in the appendix, presented as a scan, or formatted in a way that makes expense normalization difficult. The broker pro forma is always front and center because that's what makes the deal look attractive. Your job is to find the T12 and rebuild the NOI from scratch using your own assumptions—not the broker's.</p>
+
+        <h2>Why PDFs are a fundamentally poor format for comparison</h2>
+        <p>The problem isn't that OMs are PDFs. The problem is that every broker formats them differently, which means every deal you look at requires a different process to extract the same information.</p>
+        <p>One OM has gross income on page 12, presented as a pro forma. Another has it on page 31 as part of a T12 summary. A third presents it as a combined income statement where you have to back out owner expenses and management fees that don't reflect market rates. None of these are dishonest—they're just inconsistent.</p>
+        <p>When you're looking at 30 deals a quarter, this inconsistency means you're solving the same extraction problem 30 different ways. There's no leverage, no institutional memory, and no easy way to compare Deal A to Deal B when the numbers live in different places and were presented under different assumptions.</p>
+
+        <h2>Defining the canonical deal schema</h2>
+        <p>Structured screening starts with deciding what fields matter across every deal, regardless of asset type or format. For residential income property, a practical schema includes:</p>
+        <ul>
+          <li><strong>Income:</strong> gross scheduled income, vacancy assumption, effective gross income, other income</li>
+          <li><strong>Expenses:</strong> taxes, insurance, management fee (as a % of EGI, not what the seller is paying), maintenance, utilities, reserves</li>
+          <li><strong>NOI:</strong> your calculation, not theirs—and the delta from the broker's number</li>
+          <li><strong>Debt:</strong> proposed loan amount, rate, amortization, IO period, DSCR</li>
+          <li><strong>Returns:</strong> price per door, price per SF, cap rate on T12 actuals, projected CoC in year 1 and year 3</li>
+          <li><strong>Rent position:</strong> in-place average rent vs. market rent, % to market, lease expiration schedule</li>
+          <li><strong>Capex:</strong> deferred maintenance estimate, planned renovation scope, cost per door</li>
+        </ul>
+        <p>Once every deal is captured in this schema, comparison is mechanical. You can sort, filter, and rank across your pipeline without reformatting anything. You can also spot patterns—which brokers consistently present aggressive pro formas, which markets show strong in-place-to-market rent spreads, which deal types tend to have the most deferred maintenance hidden in the inspection report.</p>
+
+        <h2>Building a deal screening pipeline</h2>
+        <p>A structured pipeline has distinct stages with defined escalation criteria:</p>
+        <ul>
+          <li><strong>Stage 1 — Ingestion:</strong> extract the deal schema from the OM. This is the extraction step—the mechanical translation from document to fields. It should take minutes, not hours.</li>
+          <li><strong>Stage 2 — Quick screen:</strong> auto-score against minimum investment criteria. Does the asset type match our focus? Is the market on our list? Does the T12 NOI support a purchase price that makes sense at today's rates? If no to any of these, it goes to the archive, not the pipeline.</li>
+          <li><strong>Stage 3 — Full underwrite:</strong> deals that pass the quick screen go to a full model. Analyst builds out the assumptions, runs scenarios, stress-tests the downside case.</li>
+          <li><strong>Stage 4 — Decision:</strong> go, no-go, or resubmit with a different price. Every decision is documented with the rationale.</li>
+        </ul>
+        <p>The discipline is enforcing stage gates. If every deal goes straight to Stage 3 because “it looked promising,” you've just rebuilt the old process with more steps. The quick screen exists to protect analyst time for deals that actually merit it.</p>
+
+        <h2>The institutional memory benefit</h2>
+        <p>This is the benefit most operators don't think about when they start building a structured screening process: every deal you've looked at becomes a dataset.</p>
+        <p>After 12–18 months of structured deal review, you know: what's a typical T12 expense ratio for SFR in Austin vs. Phoenix. How often broker pro forma rent projections are achieved in the first 12 months (less often than the OM implies). What capex items appear most frequently in deals where the seller is motivated. Which submarkets produce consistent DSCR at current rates and which don't.</p>
+        <p>None of that knowledge lives in your head in any coherent form if you're working from 30 different PDFs with 30 different formats. It lives in a structured dataset that you can query.</p>
+
+        <p class=”muted”>Related: <a class=”link” href=”post3.html”>Why confidence scoring matters in AI-driven underwriting</a> • <a class=”link” href=”post1.html”>How AI is changing commercial real estate underwriting</a>.</p>
         <hr class="divider" />
         <section class="article-cta">
           <div>

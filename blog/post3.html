@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Why confidence scoring matters in AI-driven underwriting | Ground Up Capital</title>
-  <meta name="description" content="Confidence scoring routes uncertain fields to review, reduces rework, and makes AI underwriting auditable and trustworthy." />
+  <meta name="description" content="AI extraction without confidence scoring means reviewing everything—which defeats the purpose. Here's how confidence-based triage makes AI underwriting trustworthy in a real workflow." />
   <meta property="og:title" content="Why confidence scoring matters in AI-driven underwriting" />
-  <meta property="og:description" content="Confidence scoring routes uncertain fields to review, reduces rework, and makes AI underwriting auditable and trustworthy." />
+  <meta property="og:description" content="AI extraction without confidence scoring means reviewing everything—which defeats the purpose. Here's how confidence-based triage makes AI underwriting trustworthy in a real workflow." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/img/og-cover.svg" />
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -52,20 +52,49 @@
           <span class="tag tag-soft">Workflow</span>
         </div>
         <h1>Why confidence scoring matters in AI-driven underwriting</h1>
-        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 6 min read</p>
+        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 10 min read</p>
       </div>
     </section>
 
     <article class="article">
       <div class="container article-inner">
-        <p class="article-lead">In underwriting, the question isn’t “is AI accurate?” It’s “what can I trust—and what should I review?” Confidence scoring gives a workflow answer.</p>
-<h2>Confidence converts extraction into a workflow</h2>
-<p>Without confidence, reviewers re-check everything. With confidence, teams triage and review only what needs attention.</p>
-<h2>What to score</h2>
-<ul><li>Field-level values (NOI, occupancy, expense lines)</li><li>Document completeness and missing inputs</li><li>Consistency checks across sections</li></ul>
-<h2>Confidence builds stakeholder trust</h2>
-<p>Confidence plus citations makes verification and explanation straightforward.</p>
-<p class="muted">Operators who build confidence-driven review processes make better decisions and communicate more clearly with investors.</p>
+        <p class=”article-lead”>The question operators need to answer about AI in underwriting isn’t “is it accurate?” It’s “which outputs can I trust, and which ones need analyst eyes before they go into a model?” Without a confidence signal, the answer is “review everything”—which means you haven’t saved any time. Confidence scoring is what makes AI extraction into a real workflow rather than an experiment.</p>
+
+        <h2>The trust problem with unscored extraction</h2>
+        <p>AI extraction from financial documents is good but not perfect. Real estate documents are messy: scanned PDFs, inconsistent formatting, numbers that appear in multiple places and sometimes conflict with each other. A seller might present NOI in three different places in the same OM—the executive summary, the financial table, and the pro forma—and those numbers won’t always match.</p>
+        <p>When an AI extracts a field from a document with those characteristics, it makes a judgment call about which value to use. Sometimes that judgment is obviously correct. Sometimes it isn’t. Without a signal telling you which is which, you have to treat every extracted field as potentially wrong—which means manually verifying everything, which puts you roughly back where you started.</p>
+        <p>Teams that try to use AI extraction without confidence scoring often report the same experience: they don’t trust it, so they end up checking everything anyway, and after a few weeks they stop using the tool. The extraction was accurate most of the time, but “most of the time” isn’t enough when you don’t know which times.</p>
+
+        <h2>What confidence scoring actually does</h2>
+        <p>Confidence scoring attaches a reliability signal to each extracted field. The signal reflects how clearly the value was found, how many times it appeared consistently across the document, and whether it contradicts related fields.</p>
+        <p>A high-confidence extraction looks like: the NOI figure appears in the financial table, the executive summary, and the broker pro forma, and all three are within rounding of each other. The value is unambiguous.</p>
+        <p>A low-confidence extraction looks like: the T12 expense ratio is mentioned once in a footnote as a percentage, but the absolute dollar figure used to derive it doesn’t match the line items in the expense table. Something is inconsistent. That field needs analyst attention before it goes into a model.</p>
+        <p>Medium confidence is the hardest case: the value was found, it seems plausible, but it only appeared once and there’s no corroborating data. Treat it as a spot-check—verify the source quickly, confirm it makes sense in context, and move on.</p>
+
+        <h2>Designing a review queue around confidence tiers</h2>
+        <p>The practical application is a tiered review workflow:</p>
+        <ul>
+          <li><strong>High confidence:</strong> no review required. The extraction is reliable. Fields in this category—property address, unit count, asking price, tax assessments—should move directly into the model without analyst time.</li>
+          <li><strong>Medium confidence:</strong> spot-check. The analyst verifies the source document, confirms the value looks correct in context, and marks it reviewed. This takes 30–60 seconds per field, not 10 minutes.</li>
+          <li><strong>Low confidence:</strong> full review. The analyst goes back to the document, finds the correct value, and records the source. These are the fields where errors are most likely and where the cost of an error is highest—usually income and expense line items that drive NOI.</li>
+        </ul>
+        <p>The result: analyst time concentrates on low-confidence fields, which are typically a minority of the total extracted data. The high-volume, high-confidence extractions—which on a clean document might be 60–70% of all fields—move through without consuming any review time.</p>
+
+        <h2>Confidence enables defensible documentation</h2>
+        <p>The secondary benefit of confidence scoring is documentation quality. When a field is extracted with a high-confidence signal and a citation pointing to its source in the document, you have a clear record of where that number came from.</p>
+        <p>In an LP meeting where someone asks “how did you underwrite the vacancy?”, the answer “we used 8% based on the T12 actuals for the trailing 24 months, which showed an average of 7.4% occupied” is a different answer than “that’s what we modeled.” The former is auditable. The latter is a guess dressed as analysis.</p>
+        <p>This matters especially on deals that don’t perform as projected. When you need to explain to investors why a pro forma didn’t hold, being able to show exactly what assumptions you made, where they came from, and what the documents actually said is the difference between a difficult conversation and a damaging one.</p>
+
+        <h2>What changes operationally when confidence is built in</h2>
+        <p>For a lean underwriting operation—one or two analysts covering a high volume of deals—the math changes meaningfully. If a deal has 40 extracted fields and 28 of them are high confidence, the analyst is reviewing 12 fields instead of 40. Multiply that across 30 deals a quarter and the time savings are material.</p>
+        <p>More importantly, the saved time goes to the right place: the uncertain extractions that actually need judgment. Analysts aren’t spending time verifying that the property address is correct. They’re spending time on the expense normalization question that will actually affect the model output.</p>
+        <p>Throughput increases not because analysts are working faster, but because they’re spending their time on the work that requires them specifically—judgment, context, and skepticism—rather than manual transcription.</p>
+
+        <h2>The honest limitation</h2>
+        <p>Confidence scoring reduces review burden. It doesn’t eliminate the need for review. Even high-confidence extractions can be wrong when the underlying document is wrong—sellers do misstate financials, intentionally or otherwise. The discipline is using confidence as a triage tool, not an approval mechanism. The analyst who treats a high-confidence score as permission to skip verification entirely is making the same category of error as the analyst who trusts a broker pro forma without checking the T12.</p>
+        <p>Confidence scoring makes AI underwriting trustworthy enough to use in a real workflow. What makes it consistently accurate is the analyst who knows which questions to ask when something doesn’t look right.</p>
+
+        <p class=”muted”>Related: <a class=”link” href=”post2.html”>From OM PDFs to structured data: the future of deal screening</a> • <a class=”link” href=”post1.html”>How AI is changing commercial real estate underwriting</a>.</p>
         <hr class="divider" />
         <section class="article-cta">
           <div>

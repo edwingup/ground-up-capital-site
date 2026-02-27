@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>How AI is changing commercial real estate underwriting | Ground Up Capital</title>
-  <meta name="description" content="A practical look at where AI helps underwriting (extraction, consistency) and where humans still matter (assumptions, risk judgment)." />
+  <meta name="description" content="A ground-level look at how AI is being used in CRE underwriting today—what it actually speeds up, where analysts still own the judgment calls, and why audit trails matter more than speed." />
   <meta property="og:title" content="How AI is changing commercial real estate underwriting" />
-  <meta property="og:description" content="A practical look at where AI helps underwriting (extraction, consistency) and where humans still matter (assumptions, risk judgment)." />
+  <meta property="og:description" content="A ground-level look at how AI is being used in CRE underwriting today—what it actually speeds up, where analysts still own the judgment calls, and why audit trails matter more than speed." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/img/og-cover.svg" />
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
@@ -52,22 +52,50 @@
           <span class="tag tag-soft">AI Underwriting</span>
         </div>
         <h1>How AI is changing commercial real estate underwriting</h1>
-        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 8 min read</p>
+        <p class="muted">By <strong>Edwin Sequeira</strong> • Feb 2026 • 12 min read</p>
       </div>
     </section>
 
     <article class="article">
       <div class="container article-inner">
-        <p class="article-lead">AI is reshaping underwriting—but not by replacing analysts. Near-term value is practical: faster extraction, more consistency, and clearer auditability so humans spend time on judgment.</p>
-<h2>The biggest time sink isn’t analysis—it’s extraction</h2>
-<p>Teams lose hours hunting for numbers across OMs, rent rolls, and trailing statements. AI can map unstructured docs into structured fields.</p>
-<h2>Standardization improves decision velocity</h2>
-<ul><li>Fewer “where is this number?” loops</li><li>More consistent first-pass screening</li><li>Better handoffs between sourcing and underwriting</li></ul>
-<h2>Confidence scoring matters</h2>
-<p>Real workflows need triage. Confidence scoring routes uncertain fields to review and lets teams move faster on high-confidence items.</p>
-<h2>Humans still own assumptions</h2>
-<p>AI accelerates what’s written. Humans decide what’s conservative, what’s risky, and what changes the downside case.</p>
-<p class="muted">AI-assisted underwriting is changing how operators evaluate deals—faster extraction, fewer manual loops, better clarity on what matters.</p>
+        <p class=”article-lead”>The biggest shift AI brings to CRE underwriting isn’t speed—it’s consistency. A good analyst gets tired. At deal 40 on a Friday night, attention drifts and errors compound. AI doesn’t. That’s the actual value proposition, and it’s worth being specific about what that means in practice.</p>
+
+        <h2>The real bottleneck is extraction, not analysis</h2>
+        <p>Most underwriting teams will tell you their bottleneck is deal volume—too many deals, not enough time to look at all of them. But if you watch where time actually goes, a large chunk of it disappears before the analysis even starts. Analysts hunt for numbers across offering memorandums, trailing 12-month financials, rent rolls, and inspection summaries—all formatted differently, all requiring manual transcription into a model.</p>
+        <p>A single OM can run 50–100 pages. The T12 might be embedded as an image. The rent roll might be a scanned table from a property management system. None of these are consistent across brokers or sellers. Teams build workarounds—personal templates, color-coded extraction sheets, copy-paste conventions—but these are individual habits, not institutional systems. When someone leaves or a new analyst joins, the process doesn’t transfer cleanly.</p>
+        <p>Errors at this stage are particularly damaging because they compound forward. A wrong base NOI number propagates through cash-on-cash return, debt service coverage ratio, and IRR. You don’t always catch it—especially under time pressure.</p>
+
+        <h2>Where AI materially speeds up the underwriting workflow</h2>
+        <p>The categories where AI extraction has the most immediate impact are the ones with structured data that’s buried in unstructured formats:</p>
+        <ul>
+          <li><strong>Rent roll parsing:</strong> unit mix, in-place rents, lease expiration dates, current vs. market rent spread</li>
+          <li><strong>T12 normalization:</strong> flagging one-time expenses, owner-paid utilities, management fee inconsistencies, and below-market line items that sellers use to inflate NOI</li>
+          <li><strong>OM pro forma vs. T12 comparison:</strong> identifying the gap between what the broker is projecting and what the trailing actuals show—which is often the most important number in the deal</li>
+          <li><strong>Cap rate and comp parsing:</strong> pulling comparable sales and rental comps faster than a manual search through CoStar or LoopNet</li>
+        </ul>
+        <p>The value isn’t just speed. It’s that the same fields get extracted the same way every time, which means deal comparisons are actually apples-to-apples rather than analyst-to-analyst.</p>
+
+        <h2>Where humans cannot be replaced—and shouldn’t be</h2>
+        <p>AI can tell you what the T12 says. It cannot tell you whether to believe it. Those are different problems.</p>
+        <p>Setting a realistic vacancy assumption for a specific submarket requires knowing that the light rail construction on the main corridor has been affecting occupancy for 18 months and will continue for another year. Deciding whether a capex line is realistic requires understanding what deferred maintenance actually looks like on a 1970s building in that climate. Underwriting sponsor execution risk requires a judgment call about whether this particular operator has done this kind of deal before, in this kind of market, with this kind of tenant.</p>
+        <p>The assumption inputs in a real estate model—vacancy, rent growth, expense ratio, exit cap—are where returns are made or lost. These are not extraction problems. They’re judgment calls that require market context, operator experience, and a realistic view of downside scenarios. AI doesn’t have any of that.</p>
+        <p>The right frame is: AI handles what’s written. Analysts own what it means.</p>
+
+        <h2>The audit trail matters as much as the answer</h2>
+        <p>One underrated benefit of AI-assisted underwriting is documentation. When a number in your model is questioned—in an LP meeting, during due diligence, or when something goes wrong—knowing exactly where it came from is how you defend the underwrite.</p>
+        <p>”Our NOI assumption came from the T12 actuals, line 14, not the broker pro forma” is a different conversation than “that’s what was in the OM.” The former gives investors confidence. The latter raises questions.</p>
+        <p>AI that shows citations builds analyst credibility and investor trust. AI that produces answers without showing its work creates liability—because when it’s wrong, you won’t know why, and you can’t explain it.</p>
+
+        <h2>What this changes operationally</h2>
+        <p>For a small operator or emerging fund, the operational impact of better extraction isn’t about cutting headcount. It’s about throughput. If a two-person underwriting team can screen twice as many deals without working twice as many hours, they’ll find more good deals. In a competitive market, deal flow quality is a function of how many deals you can credibly evaluate.</p>
+        <p>It also improves internal communication. Standardized extraction means sourcing and underwriting speak the same language. Escalation decisions become faster when everyone is looking at the same fields in the same format, regardless of how the original document was structured.</p>
+        <p>The teams who will benefit most aren’t the large institutions with 20-person underwriting departments. It’s the operators running lean—where one analyst covering 50 deals a quarter can’t afford to lose a day to manual data entry on each one.</p>
+
+        <h2>The honest limits</h2>
+        <p>AI extraction is not perfect. Scanned PDFs degrade. Numbers appear in multiple places within the same document and sometimes conflict. Sellers present financials in formats that are deliberately difficult to parse. Any workflow that relies on AI extraction needs review queues and confidence signals—a way to flag which extractions are reliable and which need analyst attention before they go into the model.</p>
+        <p>Treating AI output as final without review is a faster way to make the same errors you were already making, just with more confidence in them. The discipline is building the workflow so that analyst review is focused where it actually matters.</p>
+
+        <p class=”muted”>Related: <a class=”link” href=”post2.html”>From OM PDFs to structured data: the future of deal screening</a> • <a class=”link” href=”post3.html”>Why confidence scoring matters in AI-driven underwriting</a>.</p>
         <hr class="divider" />
         <section class="article-cta">
           <div>
