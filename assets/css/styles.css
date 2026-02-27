@@ -36,8 +36,11 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:800;letter-spacing:-.02
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;gap:12px;align-items:center;text-decoration:none}
 .brand-mark{width:36px;height:36px;border-radius:12px;flex-shrink:0;
-  background:linear-gradient(135deg,#00D4B4,rgba(0,212,180,.25));
-  box-shadow:0 10px 24px rgba(0,212,180,.14)}
+  background:#00D4B4;
+  box-shadow:0 10px 24px rgba(0,212,180,.14);
+  display:flex;align-items:center;justify-content:center}
+.brand-mark::after{content:'G';font-family:'Manrope','Arial Black',Arial,sans-serif;
+  font-weight:800;font-size:20px;line-height:1;color:#0B1628}
 .brand-text{display:flex;flex-direction:column;gap:2px}
 .brand-name{font-family:var(--display);font-weight:800;letter-spacing:-.02em}
 .brand-tagline{font-size:12px;color:var(--muted2)}
